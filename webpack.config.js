@@ -36,7 +36,7 @@ const config = {
     packageID: {
       static: 20180000,
       base: 20180101,
-      main: 20180102
+      test: 20180102
     },
     global: {
       host: 'http://cn-hangzhou-mdsweb.cloud.alipay.com'
