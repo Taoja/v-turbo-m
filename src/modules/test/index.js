@@ -1,6 +1,5 @@
 module.exports = {
   main: {
-    page1: {},
-    page2: {}
+    index: {},
   }
 }
