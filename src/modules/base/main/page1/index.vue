@@ -1,7 +1,6 @@
 <template>
   <div>
     <img src="@a/logo.png">
-    <img src="@/modules/base/main/page1/image/logo.png">
     <div class="abc">{{msg}}</div>
     <div>{{msg2}}</div>
   </div>

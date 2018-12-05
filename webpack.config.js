@@ -90,7 +90,8 @@ const config = {
     devtool: 'eval'
   },
   build: {
-    devtool: 'source-map'
+    devtool: 'source-map',
+    limit: 50000
   }
 }
 
