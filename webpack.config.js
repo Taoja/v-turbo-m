@@ -91,7 +91,7 @@ const config = {
   },
   build: {
     devtool: 'source-map',
-    limit: 50000
+    limit: 1
   }
 }
 
