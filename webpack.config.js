@@ -20,8 +20,7 @@ const config = {
         '@s': resolve('src/common/scss'),
         '@j': resolve('src/common/js'),
         '@a': resolve('src/assets'),
-        '@c': resolve('src/components'),
-        '@extend': resolve('src/components/extend'),
+        '@c': resolve('src/components')
       },
     },
     externals: {
@@ -35,13 +34,26 @@ const config = {
         static: '112.72.12.31:80/98F6BCD302124_uat',
       }
     },
+    global: {
+      FrameWork: {
+        Github: 'https://github.com/Taoja/v-turbo-mpaas',
+        Issues: 'https://github.com/Taoja/v-turbo-mpaas/issues',
+        Document: 'https://github.com/Taoja/v-turbo-mpaas'
+      },
+      Bridge: {
+        Github: 'https://github.com/Taoja/v-turbo-bridge',
+        Issues: 'https://github.com/Taoja/v-turbo-bridge/issues',
+        Document: 'https://github.com/Taoja/v-turbo-bridge'
+      },
+      Turbo: {
+        Homepage: 'https://github.com/Taoja/v-turbo-mpaas',
+        Desk: 'https://github.com/Taoja/v-turbo-mpaas/issues',
+        Document: 'https://github.com/Taoja/v-turbo-mpaas'
+      }
+    },
     packageID: {
       static: 20180000,
-      base: 20180101,
-      test: 20180102
-    },
-    global: {
-      host: 'http://cn-hangzhou-mdsweb.cloud.alipay.com'
+      hello: 20180101
     },
     plugins: [
       new VueLoaderPlugin(), //vue加载器
@@ -53,7 +65,7 @@ const config = {
           {
             loader: 'url-loader', //url解析器
             options: {
-              limit: 500000, // 是把小于500000B的文件打成Base64的格式，写入JS。
+              limit: 10,
               name: 'images/[name]-[hash].[ext]',
             }
           }
@@ -102,7 +114,8 @@ const config = {
   dev: {
     port: 8082,
     host: '0.0.0.0',
-    devtool: 'eval'
+    devtool: 'eval',
+    open: '/hello/turbo/index.html'
   },
   build: {
     devtool: 'source-map'
