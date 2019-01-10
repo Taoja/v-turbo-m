@@ -7,7 +7,10 @@ function resolve (e) {
 
 const config = {
   dir: __dirname,
-  static: 'config.default.env.[env].static',
+  static: {
+    path: 'config.default.env[env].static',
+    publicPath: "isDev ? '../../' : 'http://'"
+  },
   default: {
     output: 'dist',
     resolve: {
