@@ -5,6 +5,8 @@ function resolve (e) {
   return path.resolve(__dirname, e)
 }
 
+const readConf = require('./build/readConf')
+
 const config = {
   dir: __dirname,
   static: {
@@ -56,6 +58,7 @@ const config = {
       hello: 20180101
     },
     plugins: [
+      new readConf(),
       new VueLoaderPlugin(), //vue加载器
     ],
     loader: [
