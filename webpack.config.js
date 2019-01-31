@@ -15,6 +15,10 @@ const config = {
   },
   default: {
     output: 'dist',
+    chunks: {
+      name: 'turboChunk',
+      test: /[\\/]common|assets|components|node_modules[\\/]/
+    },
     resolve: {
       extensions: ['.js', '.vue', '.json', '.scss'],
       alias: {
