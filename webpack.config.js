@@ -67,10 +67,6 @@ const config = {
         use: [
           {
             loader: 'url-loader', //url解析器
-            options: {
-              limit: 10,
-              name: 'images/[name]-[hash].[ext]',
-            }
           }
         ]
       },
